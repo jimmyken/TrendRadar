@@ -1,0 +1,13 @@
+name: Keepalive GitHub Actions
+
+on:
+  schedule:
+    - cron: "0 1 * * 1"   # 每周 1 次
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Heartbeat
+        run: echo "ping"
